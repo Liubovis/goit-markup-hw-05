@@ -486,6 +486,7 @@ body {
 
 .portfolio-work-link {
   color: var(--secondary-text-color);
+  cursor: unset;
 }
 
 .portfolio-work-item:hover,
