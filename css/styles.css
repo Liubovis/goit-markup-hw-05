@@ -124,7 +124,6 @@ body {
 .contact-item {
   display: flex;
   align-items: center;
-  padding: 32px 0;
 }
 
 .nav-item,
@@ -144,13 +143,12 @@ body {
 
 .contact-link[href^="mailto"],
 .contact-link[href^="tel"] {
+  display: flex;
+  align-items: center;
+  padding: 32px 0;
+
   color: var(--primary-text-color);
   font-weight: 500;
-}
-
-.contact-item:hover,
-.contact-item:focus {
-  cursor: pointer;
 }
 
 .nav-link:hover,
@@ -158,9 +156,7 @@ body {
 .contact-link:hover,
 .contact-link:focus,
 .contact-item:hover .contact-icon,
-.contact-item:hover .contact-link,
-.contact-item:focus .contact-icon,
-.contact-item:focus .contact-link {
+.contact-item:focus .contact-icon {
   color: var(--accent-text-color);
   fill: var(--accent-text-color);
 }
@@ -351,7 +347,14 @@ body {
 .socials {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+}
+
+.socials-item {
+  margin-right: 10px;
+}
+
+.socials-item:last-child {
+  margin-right: 0;
 }
 
 .socials-link {
@@ -388,17 +391,7 @@ body {
 }
 
 .regular-item {
-  display: flex;
-  align-content: center;
-  align-items: center;
-  justify-content: center;
-
-  width: 170px;
-  height: 92px;
   margin-right: 30px;
-
-  border: 1px solid var(--icon-color);
-  border-radius: 4px;
 }
 
 .regular-item:last-child {
@@ -406,6 +399,16 @@ body {
 }
 
 .regular-link {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+
+  width: 170px;
+  height: 92px;
+
+  border: 1px solid var(--icon-color);
+  border-radius: 4px;
   fill: var(--icon-color);
 }
 
@@ -416,10 +419,10 @@ body {
   text-align: center;
 }
 
-.regular-item:hover,
-.regular-item:focus,
-.regular-item:hover .regular-icon,
-.regular-item:focus .regular-icon {
+.regular-link:hover,
+.regular-link:focus,
+.regular-link:hover .regular-icon,
+.regular-link:focus .regular-icon {
   border-color: var(--accent-background-color);
   fill: var(--accent-background-color);
   cursor: pointer;
@@ -485,12 +488,12 @@ body {
 }
 
 .portfolio-work-link {
+  display: block;
   color: var(--secondary-text-color);
-  cursor: unset;
 }
 
-.portfolio-work-item:hover,
-.portfolio-work-item:focus {
+.portfolio-work-link:hover,
+.portfolio-work-link:focus {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -578,6 +581,10 @@ body {
 
 .footer-socials {
   width: 206px;
+}
+
+.footer-socials .socials-icon {
+  fill: var(--white-text-color);
 }
 
 .footer-socials-desc {
