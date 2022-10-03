@@ -14,7 +14,8 @@
   openModalBtn.addEventListener("click", toggleModal);
   closeModalBtn.addEventListener("click", toggleModal);
 
-  function toggleModal() {
+  function toggleModal(e) {
+    e.preventDefault();
     modal.classList.toggle("is-hidden");
 
     !modal.classList.contains("is-hidden")
